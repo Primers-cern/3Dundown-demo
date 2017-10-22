@@ -1,0 +1,157 @@
+html,
+body,
+div,
+p,
+h1,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+}
+
+/*外层包裹
+  可以减少鼠标在边缘时
+  所发生的尴尬动画*/
+.demo-box {
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    vertical-align: middle; /*居中*/
+
+    perspective: 800px;/*以父元素为基准设定景深*/
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: #fff center center no-repeat url(img1.jpg);
+
+    -webkit-transition: transform .2s linear, box-shadow .2s linear;
+       -moz-transition: transform .2s linear, box-shadow .2s linear;
+        -ms-transition: transform .2s linear, box-shadow .2s linear;
+         -o-transition: transform .2s linear, box-shadow .2s linear;
+            transition: transform .2s linear, box-shadow .2s linear;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);/*居中*/
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    -webkit-background-size: cover;
+            background-size: cover;
+    -webkit-box-shadow: 0 0 50px -2px #666;
+       -moz-box-shadow: 0 0 50px -2px #666;
+            box-shadow: 0 0 50px -2px #666;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;/*该元素表现为3d模型*/
+}
+
+.a {
+    font: bold 60px/1 "Microsoft Yahei";
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    line-height: 40px;
+    text-decoration: underline;
+
+    -webkit-transform: translateZ(150px);
+       -moz-transform: translateZ(150px);
+        -ms-transform: translateZ(150px);
+         -o-transform: translateZ(150px);
+            transform: translateZ(150px);
+    text-shadow: 0 0 20px #ddd;
+}
+
+
+.b {
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    line-height: 30px;
+    text-align: left;
+
+    -webkit-transform: translateZ(75px);
+       -moz-transform: translateZ(75px);
+        -ms-transform: translateZ(75px);
+         -o-transform: translateZ(75px);
+            transform: translateZ(75px);
+}
+
+
+.c {
+    position: absolute;
+    bottom: 8px;
+    left: 14px;
+    line-height: 20px;
+}
+
+button {
+    display: block;
+    position: absolute;
+    left: 13%;
+    width: 12%;
+    min-width: 130px;
+    height: 6%;
+    border: none;
+    font-size: 18px;
+
+    -webkit-transform: translateZ(125px);
+       -moz-transform: translateZ(125px);
+        -ms-transform: translateZ(125px);
+         -o-transform: translateZ(125px);
+            transform: translateZ(125px);
+    -webkit-box-shadow: 0 0 10px -2px #aaa;
+       -moz-box-shadow: 0 0 10px -2px #aaa;
+            box-shadow: 0 0 10px -2px #aaa;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn1 {
+    top: 58%;
+    background: -moz-linear-gradient(top, #f9a9b7, #c50c0c);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f9a9b7), to(#c50c0c));
+    background:   -o-linear-gradient(top, #f9a9b7, #c50c0c);
+}
+
+.btn2 {
+    top: 68%;
+    background: -moz-linear-gradient(top, #fff, #888);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#888));
+    background:   -o-linear-gradient(top, #fff, #888);
+}
+
+/*柱子，为了使立体感更明显*/
+.zhu {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 100px;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+}
+
+
+
+
+
